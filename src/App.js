@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Welcome from './components/Welcome';
+import Merhaba from './components/Merhaba';
+import Button from './components/Button';
+import Card from './components/Card';
+
+// import images from assets folder
+import resim1 from './assets/user1.jpeg';
+import resim2 from './assets/user2.jpeg';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          <Card source={resim1} kisi= "Ahmet Yilmaz" text="Alan sorumlusu lorem lorem lorem " />
+          <Card source={resim2} kisi= "Ayse Yilmaz" text="Yönetici lorem lorem loremlorem lorem" />
+          <Card source={'/images/userPublic.jpeg'} kisi= "Ali Kara" text="Asistan lorem lorem lorem lorem lorem" />
+
+          <Welcome isim="Hasan Yildiz" yas="35"   sehir="Istanbul"/>
+          <Welcome />
+         
+          <hr/>
+
+          <Merhaba isim="Ali Uzungol"  yas="25" sehir="Trabzon"/>
+          <Merhaba />
+         
+          
+          <hr/>
+          <Button text="Read more"/>
+          <Button />
+          
+      </div>
   );
 }
 
